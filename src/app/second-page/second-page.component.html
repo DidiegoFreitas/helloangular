@@ -1,0 +1,32 @@
+<div class="container">
+    <h1>Editar Informações</h1>
+    <div class="bloco">
+        <div *ngFor="let produto of produtos" class="item-editaveis">
+            <div *ngIf="produto['carac'].length > 0" class="item-info">
+                <div *ngFor="let item of produto['carac']">
+                    {{item}}
+                </div>
+            </div>
+            <div class="item-form">
+                <label for="labelId">ID Produto:</label>
+                <input id="labelId" type="text" value="{{produto['id']}}">
+            </div>
+            <div class="item-form">
+                <label for="labelNome">Nome:</label>
+                <input id="labelNome" type="text" value="{{produto['nome']}}">
+            </div>
+            <div class="item-form">
+                <label for="labelQtd">Quantidade:</label>
+                <input id="labelQtd" type="number" value="{{produto['qtd']}}">
+            </div>
+            <div class="item-form">
+                <label for="labelPreco">Preço Unitário:</label>
+                <input id="labelPreco" type="number" value="{{produto['preco']}}">
+            </div>
+            <div class="item-form">
+                <label for="labelPreco">Descrição:</label>
+                <textarea id="labelPreco" placeholder="Não deixar este campo vazio!" rows="2">{{produto['descricao']}}</textarea>
+            </div>
+        </div>
+    </div>
+</div>

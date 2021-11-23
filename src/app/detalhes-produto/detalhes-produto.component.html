@@ -1,0 +1,15 @@
+<div class="container">
+    <h1>Detalhes</h1>
+    <div class="bloco" *ngIf="produto">
+
+        <h3>{{produto.nome}}</h3>
+        <div>{{produto.preco | currency}}</div>
+        <div>{{produto.descricao}}</div>
+        <div *ngIf="produto['carac'].length > 0" class="item-info">
+            <div *ngFor="let item of produto['carac']">
+                {{item}}
+            </div>
+        </div>
+
+    </div>
+</div>

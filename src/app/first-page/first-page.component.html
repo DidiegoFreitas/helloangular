@@ -1,0 +1,24 @@
+<div class="container">
+    <h1>Mostruário</h1>
+    <table>
+        <thead>
+            <tr>
+                <th class="col-min"></th>
+                <th *ngFor="let col of colsTable"> {{col[1]}} </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let produto of produtos" [routerLink]="['/detalhes', produto.id]">
+                <td class="col-min">
+                    <button>
+                        <mat-icon>favorite</mat-icon>
+                    </button>
+                </td>
+                <td>{{produto['id']}}</td>
+                <td>{{produto['nome']}}</td>
+                <td>{{produto['preco'] | currency}}</td>
+                <td>{{produto['descricao']}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

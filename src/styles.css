@@ -10,7 +10,9 @@ app-root{
 }
 app-first-page,
 app-second-page,
-app-detalhes-produto{
+app-detalhes-produto,
+app-carrinho,
+app-envio{
     flex: 1;
     overflow: auto;
 }
@@ -19,4 +21,10 @@ div.container{
     padding-left: 20px;
     padding-right: 20px;
     flex-direction: column;
+}
+.hide{
+    display: none !important;
+}
+.btn-color-default{
+    background-color: #ffa6a6 !important;
 }

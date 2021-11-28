@@ -38,3 +38,8 @@ h3{
 .item-info div:hover{
     background-color: #ffe2e2;
 }
+.bloco button{
+    width: 100%;
+    margin-top: 10px;
+    background-color: #ffa6a6;
+}

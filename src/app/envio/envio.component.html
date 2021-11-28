@@ -1,0 +1,17 @@
+<div class="container">
+    <h1>Preços de Envio</h1>
+    <table>
+        <thead>
+            <tr>
+                <th class="col-min">Tipo</th>
+                <th class="col-min">Preço</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let envio of custosEntrega | async">
+                <td>{{ envio.tipo }}</td>
+                <td>{{ envio.preco | currency }}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

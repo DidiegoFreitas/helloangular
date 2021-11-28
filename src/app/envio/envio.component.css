@@ -1,0 +1,44 @@
+*{
+    cursor: default;
+    user-select: none;
+}
+h1{
+    margin-top: 16px;
+}
+table{
+    width: 100%;
+    border-spacing: 0px;
+    border-top: 1px solid #bfbfbf;
+}
+td,
+th{
+    padding: 2px 10px;
+    text-align: start;
+    border-bottom: 1px solid #bfbfbf;
+}
+tbody tr td{
+    cursor: pointer;
+}
+tbody tr:hover{
+    background-color: #ebebeb;
+}
+tbody tr td button{
+    padding: 4px;
+    display: flex;
+    cursor: pointer;
+    color: #999999;
+    margin-right: 5px;
+    border-radius: 5px;
+    border: 1px solid transparent;
+    background-color: transparent;
+}
+tbody tr td button mat-icon{
+    cursor: pointer;
+    color: #ff8585;
+}
+tbody tr td button:hover mat-icon{
+    color: #ff5d5d;   
+}
+.col-min{
+    width: 30px;
+}

@@ -1,0 +1,53 @@
+<form [formGroup]="formEnvio" (ngSubmit)="onSubmit()">
+    <mat-card class="example-card mat-elevation-z3">
+        <mat-card-title>Carrinho</mat-card-title>
+
+        <mat-divider inset></mat-divider>
+
+        <mat-card-content *ngIf="items.length; else elseBlock">
+            <table mat-table class="mat-elevation-z1">
+                <thead>
+                    <tr>
+                        <th class="col-min">Produto</th>
+                        <th class="col-min">Preço</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let item of items">
+                        <td>{{ item.nome }}</td>
+                        <td>{{ item.preco | currency }}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </mat-card-content>
+
+        <ng-template #elseBlock>
+            <mat-card-subtitle>Carrinho vazio!</mat-card-subtitle>
+        </ng-template>
+
+        <mat-divider inset></mat-divider>
+
+        <mat-card-title second>Informações para envio <a routerLink="/envio">Custos de envio</a></mat-card-title>
+
+        <mat-divider inset></mat-divider>
+        <mat-card-content>
+            <mat-form-field appearance="legacy">
+                <mat-label>Nome</mat-label>
+                <input id="nome" matInput placeholder="Nome" formControlName="nome">
+                <mat-hint>Nome Completo</mat-hint>
+            </mat-form-field>
+            <mat-form-field appearance="legacy">
+                <mat-label>Endereço</mat-label>
+                <input id="endereco" matInput placeholder="Endereço" formControlName="endereco">
+                <mat-hint>Rua num, Cidade, Estado - CEP</mat-hint>
+            </mat-form-field>
+        </mat-card-content>
+
+        <mat-divider inset></mat-divider>
+
+        <mat-card-actions align="end">
+            <button mat-flat-button color="accent" class="btn-color-default" type="submit">Confirmar!</button>
+        </mat-card-actions>
+
+    </mat-card>
+</form>

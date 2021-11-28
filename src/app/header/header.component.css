@@ -21,7 +21,12 @@ button:hover{
     background-color: transparent;
 }
 button:first-child{
-    border: 1px solid #ffffff;
+    width: auto;
+    height: auto;
+    border: 0px;
+}
+button:first-child:hover{
+    border: 0px;
 }
 button:first-child:hover{
     background-color: #ff8888;

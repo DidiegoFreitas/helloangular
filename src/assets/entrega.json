@@ -1,0 +1,14 @@
+[
+    {
+        "tipo":"Amanhã",
+        "preco":26
+    },
+    {
+        "tipo":"2 dias",
+        "preco":10
+    },
+    {
+        "tipo":"correios",
+        "preco":3
+    }
+]
